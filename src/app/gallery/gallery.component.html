@@ -1,0 +1,63 @@
+<ul class="gallery_box">
+  <!-- <li>
+    <a href="#0"><img src="https://picsum.photos/600/700/?random">
+      <div class="box_data">
+
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="#0"><img src="https://picsum.photos/600/701/?random">
+      <div class="box_data">
+
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="#0"><img src="https://picsum.photos/600/702/?random">
+      <div class="box_data">
+
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="#0"><img src="https://picsum.photos/600/703/?random">
+      <div class="box_data">
+
+      </div>
+    </a>
+  </li>
+  <li style="    position: relative;
+    top: -134px;">
+    <a href="#0"><img src="https://picsum.photos/600/704/?random">
+      <div class="box_data">
+
+      </div>
+    </a>
+  </li> -->
+  <li *ngFor="let source of sources">
+    <a href="#0" data-toggle="modal" (click)="clickedImage(source.largeImageURL)" data-target="#imageModal"><img
+        src={{source.largeImageURL}}>
+      <div class="box_data">
+      </div>
+    </a>
+  </li>
+</ul>
+
+<div id="imageModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+      <div class="modal-body">
+        <img src={{imageURL}}>
+      </div>
+
+    </div>
+
+  </div>
+</div>

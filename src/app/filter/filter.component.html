@@ -1,0 +1,9 @@
+<div class="filter">
+  <form class="form-inline md-form mr-auto mb-4" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <input class="form-control" type="text" placeholder="Filter By Keyword" aria-label="Search" data-toggle="tooltip"
+      data-placement="top"
+      title="eg fashion, nature, science, education, feelings, health, people, religion, places, animals, industry, computer, food, sports, transportation, travel, buildings, business, music "
+      name="keyword" ngModel required>
+    <button class="btn btn-info" type="submit" [disabled]="!f.valid">Filter</button>
+  </form>
+</div>
